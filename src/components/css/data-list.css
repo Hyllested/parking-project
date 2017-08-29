@@ -1,0 +1,9 @@
+.list-items{
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.list-box{
+    background-color: #ffffff;
+    padding: 20px;
+}
