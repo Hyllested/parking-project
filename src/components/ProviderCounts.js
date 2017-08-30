@@ -15,7 +15,7 @@ export class ProviderCounts extends Component {
             <div>
                 <ul>
                     {this.state.parkingCountPerProvider.map((provider, i) => (
-                        <li className="list-items" key={i}>{provider.count} parkeringer hos {provider.providerId} </li>
+                        <li className="mui--text-subhead list-items" key={i}>{provider.count} parkeringer hos {provider.providerId} </li>
                     ))}
                 </ul>
             </div>

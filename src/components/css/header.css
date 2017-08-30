@@ -1,16 +1,11 @@
 .wrapper-header {
-display: grid;
-grid-template-columns: 25% 50% 25%; 
-background-color: #fff;
+background-color: #074D72;
 }
 
 .box-header {
-    color: #797979;
-    font-size: 120%;
-    padding-left: 50px;
-    padding: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
 }
 

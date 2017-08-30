@@ -29,10 +29,13 @@ export class DataList extends Component {
 
   render() {
     return (
-      <div className="list-box">
+      <div>
         <ul>
           {this.state.filteredParkingData.map((parking, i) =>
-            <li className="list-items" key={i}>Udbyder: {parking.providerId} Tidspunkt: {new Date(parking.validityBegin).toLocaleString()} til {new Date(parking.validityEnd).toLocaleString()} Koordinater: {parking.sellingPointLocation}
+            <li className="list-items mui--text-body1 list-items-box" key={i}>
+              <div> Udbyder: {parking.providerId} </div>
+              <div> Tidspunkt: {new Date(parking.validityBegin).toLocaleString()} til {new Date(parking.validityEnd).toLocaleString()} </div>
+              <div> Koordinater: {parking.sellingPointLocation} </div>
             </li>
           )}
         </ul>

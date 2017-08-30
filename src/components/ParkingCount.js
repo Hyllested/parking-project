@@ -14,7 +14,7 @@ export class ParkingCount extends Component {
 
   render() {
     return (
-      <div className="parking-box mui--text-title">
+      <div className="parking-box mui--text-title title-text">
         {this.state.textLabel}{this.state.count}
       </div>
     );
