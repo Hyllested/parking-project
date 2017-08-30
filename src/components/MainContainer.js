@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-
 import { DataList } from "./DataList";
 import { ParkingCount } from "./ParkingCount";
 import { ProviderCounts } from "./ProviderCounts";
 import { ProviderSelector } from "./ProviderSelector";
 import Map from './Map';
-import Places from './Places';
 import Panel from 'muicss/lib/react/panel';
 
-import './css/container.css';
+import './css/main-container.css';
 
 export class MainContainer extends Component {
     constructor(props) {
@@ -66,20 +64,24 @@ export class MainContainer extends Component {
             lat: 57.040619,
             lng: 9.935004
         }
+
         if (this.state.parkingData.results) {
             return (
                 <div className="wrapper">
-                    <Panel style={{zIndex: 2}}>
-                        <ParkingCount count={this.state.parkingData.results.length} textLabel={"Parkeringer i den sidste time: "} />
+                    <Panel style={{zIndex: 2, }}>
+                        <ParkingCount count={this.state.parkingData.results.length} textLabel={"Parkeringer den sidste time: "} />
                         <ProviderCounts parkingCountPerProvider={this.state.parkingCountPerProvider} />
                     </Panel>
                     <div />
-                    <Panel style={{zIndex: 2}}>
+                    <Panel className="box-margin" style={{zIndex: 3}}>
                         <ProviderSelector parkingCountPerProvider={this.state.parkingCountPerProvider} providerSelected={this.handleProviderSelected} />
+                    </Panel>
+                    <div/>
+                    <Panel className="box-margin" style={{zIndex: 2, overflow: "scroll"}}>
                         <DataList parkingData={this.state.parkingData} parkingFilter={this.state.parkingFilter} />
                     </Panel>
                     <div />
-                    <div style={{ position: 'absolute', width:"100%", height:"100%", background: 'red' }}>
+                    <div style={{ position: 'absolute', width:"100%", height:"90%", background: 'red' }}>
                         <Map
                             containerElement={
                                 <div style={{ height: '100%' }} />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Divider from 'muicss/lib/react/divider';
 import './css/data-list.css';
 
 export class DataList extends Component {
@@ -28,14 +29,19 @@ export class DataList extends Component {
   }
 
   render() {
+
     return (
       <div >
-        <ul style={{overflow: "scroll", height:"100%"}} >
+        <ul style={{height:"100%"}} >
           {this.state.filteredParkingData.map((parking, i) =>
             <li className="list-items mui--text-body1 list-items-box" key={i}>
-              <div> Udbyder: {parking.providerId} </div>
-              <div> Tidspunkt: {new Date(parking.validityBegin).toLocaleString()} til {new Date(parking.validityEnd).toLocaleString()} </div>
-              <div> Koordinater: {parking.sellingPointLocation} </div>
+              <div className="bold-text">Udbyder</div>
+              <div>{parking.providerId}</div>
+              <div className="bold-text">Tidspunkt</div>
+              <div>{new Date(parking.validityBegin).toLocaleString()} til {new Date(parking.validityEnd).toLocaleString()} </div>
+              <div className="bold-text">Koordinater</div>
+              <div>{parking.sellingPointLocation} </div>
+              <Divider style={{marginTop: 5}}/>
             </li>
           )}
         </ul>

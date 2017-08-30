@@ -22,9 +22,8 @@ export class ProviderSelector extends Component {
         return (
             <div >
                 <div className="mui--text-title title-text">Oversigt over parkinger</div>
-                <div className="mui--text-subhead">Vælg udbyder:</div>
-
-                <div>
+                {/* <div className="mui--text-subhead subheading-text">Vælg udbyder</div> */}
+                <div className="mui--text-menu subheading-text">
                     <Select onChange={(event) => this.handleChange(event)} >
                         <Option value={undefined} label="Ingen filter"></Option>
                         {this.state.parkingCountPerProvider.map((provider, i) => (
