@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Divider from 'muicss/lib/react/divider';
-import './css/data-list.css';
+import React, { Component } from "react";
+import Divider from "muicss/lib/react/divider";
+import "./css/data-list.css";
 
 export class DataList extends Component {
   constructor(props) {
@@ -29,19 +29,18 @@ export class DataList extends Component {
   }
 
   render() {
-
     return (
-      <div >
-        <ul style={{height:"100%"}} >
+      <div>
+        <ul style={{ height: "100%" }} >
           {this.state.filteredParkingData.map((parking, i) =>
             <li className="list-items mui--text-body1 list-items-box" key={i}>
-              <div className="bold-text">Udbyder</div>
-              <div>{parking.providerId}</div>
-              <div className="bold-text">Tidspunkt</div>
-              <div>{new Date(parking.validityBegin).toLocaleString()} til {new Date(parking.validityEnd).toLocaleString()} </div>
-              <div className="bold-text">Koordinater</div>
-              <div>{parking.sellingPointLocation} </div>
-              <Divider style={{marginTop: 5}}/>
+              <div>Udbyder</div>
+              <div className="gray-text">{parking.providerId}</div>
+              <div>Tidspunkt</div>
+              <div className="gray-text">{new Date(parking.validityBegin).toLocaleString()} til {new Date(parking.validityEnd).toLocaleString()} </div>
+              <div>Koordinater</div>
+              <div className="gray-text">{parking.sellingPointLocation} </div>
+              <Divider style={{ marginTop: 5 }} />
             </li>
           )}
         </ul>

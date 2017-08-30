@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Option from 'muicss/lib/react/option';
-import Select from 'muicss/lib/react/select';
-import './css/provider-selector.css';
+import React, { Component } from "react";
+import Option from "muicss/lib/react/option";
+import Select from "muicss/lib/react/select";
+import "./css/provider-selector.css";
 
 export class ProviderSelector extends Component {
     constructor(props) {
@@ -10,7 +10,6 @@ export class ProviderSelector extends Component {
         this.state = {
             parkingCountPerProvider: props.parkingCountPerProvider
         };
-
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -22,7 +21,6 @@ export class ProviderSelector extends Component {
         return (
             <div >
                 <div className="mui--text-title title-text">Oversigt over parkinger</div>
-                {/* <div className="mui--text-subhead subheading-text">Vælg udbyder</div> */}
                 <div className="mui--text-menu subheading-text">
                     <Select onChange={(event) => this.handleChange(event)} >
                         <Option value={undefined} label="Ingen filter"></Option>

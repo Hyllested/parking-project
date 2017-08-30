@@ -6,11 +6,8 @@ export class Header extends Component {
     render() {
         return (
             <Panel className="box-header wrapper-header mui--text-headline">
-                <div/>
                 <div> Parkerings Oversigt</div>
-                <div/>
             </Panel>
         );
-
     }
 }

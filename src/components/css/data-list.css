@@ -1,18 +1,17 @@
-.list-items{
+.list-items {
     list-style: none;
 }
 
-.list-items-box{
+.list-items-box {
     width: 100%;
     padding-bottom: 5px;
-    
 }
 
-ul{
+ul {
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.bold-text{
-    font-weight: bold;
+.gray-text {
+    color: #818181;
 }

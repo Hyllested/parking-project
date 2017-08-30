@@ -1,11 +1,12 @@
 .title-text {
     padding-bottom: 10px;
-    padding-right: 10px; 
+    padding-right: 10px;
     padding-left: 10px;
- }
+    color: #00AA8D
+}
 
- .subheading-text{
+.subheading-text {
     padding-bottom: 10px;
-    padding-right: 10px; 
+    padding-right: 10px;
     padding-left: 10px;
- }
+}

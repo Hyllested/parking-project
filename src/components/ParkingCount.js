@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './css/parking-count.css';
+import React, { Component } from "react";
+import "./css/parking-count.css";
 
 export class ParkingCount extends Component {
   constructor(props) {
