@@ -29,8 +29,8 @@ export class DataList extends Component {
 
   render() {
     return (
-      <div>
-        <ul>
+      <div >
+        <ul style={{overflow: "scroll", height:"100%"}} >
           {this.state.filteredParkingData.map((parking, i) =>
             <li className="list-items mui--text-body1 list-items-box" key={i}>
               <div> Udbyder: {parking.providerId} </div>

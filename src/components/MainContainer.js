@@ -4,6 +4,8 @@ import { DataList } from "./DataList";
 import { ParkingCount } from "./ParkingCount";
 import { ProviderCounts } from "./ProviderCounts";
 import { ProviderSelector } from "./ProviderSelector";
+import Map from './Map';
+import Places from './Places';
 import Panel from 'muicss/lib/react/panel';
 
 import './css/container.css';
@@ -60,20 +62,34 @@ export class MainContainer extends Component {
     }
 
     render() {
+        const location = {
+            lat: 57.040619,
+            lng: 9.935004
+        }
         if (this.state.parkingData.results) {
             return (
-                <div className="wrapper box">
-                    <div/>
-                    <Panel>
-                    <ParkingCount count={this.state.parkingData.results.length} textLabel={"Parkeringer i den sidste time: "} />
-                    <ProviderCounts parkingCountPerProvider={this.state.parkingCountPerProvider} />
+                <div className="wrapper">
+                    <Panel style={{zIndex: 2}}>
+                        <ParkingCount count={this.state.parkingData.results.length} textLabel={"Parkeringer i den sidste time: "} />
+                        <ProviderCounts parkingCountPerProvider={this.state.parkingCountPerProvider} />
                     </Panel>
-                    <div/>
-                    <div/>
-                    <Panel>
-                    <ProviderSelector parkingCountPerProvider={this.state.parkingCountPerProvider} providerSelected={this.handleProviderSelected} />
-                    <DataList parkingData={this.state.parkingData} parkingFilter={this.state.parkingFilter} />
+                    <div />
+                    <Panel style={{zIndex: 2}}>
+                        <ProviderSelector parkingCountPerProvider={this.state.parkingCountPerProvider} providerSelected={this.handleProviderSelected} />
+                        <DataList parkingData={this.state.parkingData} parkingFilter={this.state.parkingFilter} />
                     </Panel>
+                    <div />
+                    <div style={{ position: 'absolute', width:"100%", height:"100%", background: 'red' }}>
+                        <Map
+                            containerElement={
+                                <div style={{ height: '100%' }} />
+                            }
+                            mapElement={
+                                <div style={{ height: '100%' }} />
+                            } 
+                            />
+                        
+                    </div>
                 </div>
             );
         } else {
